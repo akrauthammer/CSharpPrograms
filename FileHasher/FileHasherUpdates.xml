@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<updates>
+  <update appId="FileHasher">
+    <version>1.0.0.0</version>
+    <url></url>
+    <filename>FileHasher v1.0.0.0</filename>
+    <md5></md5>
+  </update>
+  <update appId="FileHasher">
+    <version>2.0.0.0</version>
+    <url></url>
+    <filename>FileHasher v2.0.0.0</filename>
+    <md5></md5>
+  </update>
+</updates>
