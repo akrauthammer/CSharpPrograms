@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Kraut.MathLib")]
+[assembly: AssemblyTitle("Kraut.Lib.Math")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Kraut.MathLib")]
+[assembly: AssemblyProduct("Kraut.Lib.Math")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("dad45dca-5500-43d7-bb7c-ee80985eb54b")]
+[assembly: Guid("fbf912ce-a7f8-4961-b049-92cbd03f408e")]
 
 // Version information for an assembly consists of the following four values:
 //

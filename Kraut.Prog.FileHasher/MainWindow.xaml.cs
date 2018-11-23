@@ -1,11 +1,10 @@
-﻿using System.ComponentModel;
-using System.IO;
+﻿using System.IO;
 using System.Windows;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
-using Kraut.MathLib;
-using Kraut.LoggerLib;
+using Kraut.Lib.Math;
+using System.ComponentModel;
 
-namespace CSV_Editor
+namespace Kraut.Prog.FileHasher
 {
     public partial class MainWindow : Window
     {
@@ -13,7 +12,6 @@ namespace CSV_Editor
         private string file;
         private string hash;
         private HashType alg;
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -24,10 +22,6 @@ namespace CSV_Editor
             this.bgWorker = new BackgroundWorker();
             this.bgWorker.DoWork += BgWorker_DoWork;
             this.bgWorker.RunWorkerCompleted += BgWorker_RunWorkerCompleted;
-
-            ConsoleWindow cw = new ConsoleWindow("Debugger");
-            cw.WriteLine("akr line 1");
-            cw.WriteLine("akr line 2");
         }
 
         private void BtnFile_Click(object sender, RoutedEventArgs e)
@@ -59,7 +53,7 @@ namespace CSV_Editor
                 MessageBox.Show(msg, "File not found!", MessageBoxButton.OK);
             }
         }
-        
+
         private HashType getAlgorithem()
         {
             if (radMD5.IsChecked == true)
@@ -88,3 +82,4 @@ namespace CSV_Editor
         }
     }
 }
+

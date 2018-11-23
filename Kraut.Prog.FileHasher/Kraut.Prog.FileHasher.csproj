@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8A05A3BA-5CA9-4772-8976-9DCD76E56109}</ProjectGuid>
+    <ProjectGuid>{480B14CA-7F5D-45B6-A2EC-3DA22851508A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FileHasher</RootNamespace>
-    <AssemblyName>FileHasher</AssemblyName>
+    <RootNamespace>Kraut.Prog.FileHasher</RootNamespace>
+    <AssemblyName>Kraut.Prog.FileHasher</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -95,17 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Kraut.LoggerLib\Kraut.LoggerLib.csproj">
-      <Project>{bd244eff-6160-469d-87ae-0215070bb792}</Project>
-      <Name>Kraut.LoggerLib</Name>
+    <ProjectReference Include="..\Kraut.Lib.Math\Kraut.Lib.Math.csproj">
+      <Project>{fbf912ce-a7f8-4961-b049-92cbd03f408e}</Project>
+      <Name>Kraut.Lib.Math</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Kraut.MathLib\Kraut.MathLib.csproj">
-      <Project>{dad45dca-5500-43d7-bb7c-ee80985eb54b}</Project>
-      <Name>Kraut.MathLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

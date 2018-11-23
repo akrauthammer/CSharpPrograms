@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Kraut.MathLib
+namespace Kraut.Lib.Math
 {
     public enum HashType
     {

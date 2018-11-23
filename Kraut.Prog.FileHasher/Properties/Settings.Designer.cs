@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSV_Editor.Properties
+namespace Kraut.Prog.FileHasher.Properties
 {
 
 

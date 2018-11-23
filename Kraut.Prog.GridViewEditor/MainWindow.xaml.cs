@@ -34,7 +34,7 @@ namespace Kraut.Prog.GridViewEditor
         }
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //vmd.Tabs.RemoveAt(tabControl.SelectedIndex);
+            vmd.Tabs.RemoveAt(tabControl.SelectedIndex);
         }
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
@@ -52,14 +52,10 @@ namespace Kraut.Prog.GridViewEditor
             else
             {
                 menu_view_explore.IsChecked = true;
-                Column1.Width = new GridLength(100);
+                Column1.Width = new GridLength(150);
                 ColumnSpacer.Width = new GridLength(2);
 
             }
-
-        }
-        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
         }
 

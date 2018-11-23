@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kraut.Prog.GridViewEditor"
         mc:Ignorable="d"
-        Title="AK's Editor" Height="450" Width="800">
+        Title="AK's Editor" Height="900" Width="1600">
     <DockPanel>
         <Menu DockPanel.Dock="Top" Background="#FFFFFF">
             <MenuItem Header="_File">
@@ -27,43 +27,52 @@
 
         <Grid Margin="4,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition x:Name="Column1"/>
+                <ColumnDefinition x:Name="Column1" Width="250"/>
                 <ColumnDefinition x:Name="ColumnSpacer" Width="2"/>
                 <ColumnDefinition x:Name="Column2"/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="Row1"/>
+                <RowDefinition x:Name="RowSpacer" Height="2"/>
+                <RowDefinition x:Name="Row2" Height="200"/>
+            </Grid.RowDefinitions>
 
-            <TreeView x:Name="treeViewExplorer" BorderBrush="#AAAAAA">
+            <TreeView x:Name="treeViewExplorer" Grid.Column="0" Grid.RowSpan="3" BorderBrush="#AAAAAA">
                 <TreeViewItem Header="Cold Drinks">
                     <TreeViewItem Header="Coke"></TreeViewItem>
-                    <TreeViewItem Header="Pepsi"></TreeViewItem>
-                    <TreeViewItem Header="Orange Juice"></TreeViewItem>
-                    <TreeViewItem Header="Milk"></TreeViewItem>
-                    <TreeViewItem Header="Iced Tea"></TreeViewItem>
-                    <TreeViewItem Header="Mango Shake"></TreeViewItem>
                 </TreeViewItem>
             </TreeView>
 
 
-            <GridSplitter Width="2" ResizeBehavior="PreviousAndNext" Grid.Column="1"/>
+            <GridSplitter Width="2" ResizeBehavior="PreviousAndNext" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Stretch"/>
 
-            <TabControl x:Name="tabControl" Grid.Column="2" BorderBrush="#AAAAAA" SelectionChanged="tabControl_SelectionChanged">
+            <TabControl x:Name="tabControl" Grid.Column="2" Grid.Row="0" BorderBrush="#AAAAAA">
                 <TabControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Header}" Margin="0,0,6,0" FontSize="11"/>
                             <TextBlock Text="X" MouseDown="Image_MouseDown"/>
+                            <!--
+                            <Image Source="PathToFile\close.png" Width="20" Height="20" MouseDown="Image_MouseDown"/>
+                            -->
                         </StackPanel>
                     </DataTemplate>
                 </TabControl.ItemTemplate>
                 <TabControl.ContentTemplate>
                     <DataTemplate x:Name="grid">
-                        <DataGrid x:Name="dataGrid" Margin="0,0,0,0"/>
+                        <DataGrid x:Name="dataGrid" BorderBrush="#FFFFFF" Background="#FFFFFF" Margin="0,0,0,0"/>
                     </DataTemplate>
                 </TabControl.ContentTemplate>
-
             </TabControl>
 
-        </Grid>
+            <GridSplitter Height="2" Width="Auto" ResizeDirection="Rows" Grid.Row="1" Grid.Column="2" ResizeBehavior="PreviousAndNext" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+
+            <TabControl Grid.Column="2" Grid.Row="2" BorderBrush="#AAAAAA" TabStripPlacement="Bottom">
+                <TabItem Header="Search/Replace"></TabItem>
+                <TabItem Header="Scripting"></TabItem>
+            </TabControl>
+
+            </Grid>
 
 
 
