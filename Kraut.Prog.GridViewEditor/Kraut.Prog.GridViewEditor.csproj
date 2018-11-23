@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47FDD0C2-E300-4CA0-9D50-2D8B4AFBD800}</ProjectGuid>
+    <ProjectGuid>{964827B3-833A-407E-BAA5-CBD347105AB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CSV_Editor</RootNamespace>
-    <AssemblyName>CSV_Editor</AssemblyName>
+    <RootNamespace>Kraut.Prog.GridViewEditor</RootNamespace>
+    <AssemblyName>Kraut.Prog.GridViewEditor</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TabViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,8 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GridViewTab.cs" />
-    <Compile Include="GridViewTabViewModel.cs" />
+    <Compile Include="GridTab.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
