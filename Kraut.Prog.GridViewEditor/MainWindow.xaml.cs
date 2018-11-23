@@ -1,26 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Drawing;
+using Kraut.Lib.AutoUpdater;
 
 namespace Kraut.Prog.GridViewEditor
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IUpdatable
     {
         private TabViewModel vmd;
+
+        public string ApplicationName { get { return "AKs Editor"; } }
+        public string ApplicationId { get { return "GridViewEditor"; } }
+        public Assembly ApplicationAssembly { get { return Assembly.GetExecutingAssembly(); } }
+        public ImageSource ApplicationIcon { get { return this.Icon; } }
+        public Uri UpdateXmlLocation { get { return new Uri(""); } }
+        public Window Context { get { return this; } }
 
         public MainWindow()
         {

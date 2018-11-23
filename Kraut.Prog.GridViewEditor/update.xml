@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<updates>
+  <update appId="GridViewEditor">
+    <version>1.0.0.0</version>
+    <url>http://google.dk</url>
+    <fileName>AKs Editor v1.0</fileName>
+    <md5>xxx</md5>
+    <description>This is the first version</description>
+  </update>
+  <update>
+    <version>2.0.0.0</version>
+    <url>http://google.dk</url>
+    <fileName>AKs Editor v2.0</fileName>
+    <md5>yyy</md5>
+    <description>This is the second version</description>
+  </update>
+</updates>
